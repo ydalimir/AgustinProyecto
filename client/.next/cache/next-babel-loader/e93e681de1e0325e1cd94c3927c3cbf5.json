@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./TabsGame\";","map":{"version":3,"sources":["/home/ydalimir/Documentos/GitHub/AgustinProyecto/client/components/Game/TabsGame/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,YAAxB","sourcesContent":["export { default } from \"./TabsGame\";\n"]},"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { useContext } from \"react\";\nimport CartContext from \"../context/CartContext\";\nexport default (() => useContext(CartContext));","map":null,"metadata":{},"sourceType":"module"}

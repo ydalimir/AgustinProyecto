@@ -1,6 +1,7 @@
-
+import React, { useState, useEffect } from "react";
 import { Container, Grid, Image, Input } from "semantic-ui-react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function TopBar() {
   return (
@@ -8,10 +9,10 @@ export default function TopBar() {
       <Container>
         <Grid className="top-bar">
           <Grid.Column width={8} className="top-bar__left">
-          <Logo />
+            <Logo />
           </Grid.Column>
           <Grid.Column width={8} className="top-bar__right">
-          <Search />
+            <Search />
           </Grid.Column>
         </Grid>
       </Container>
@@ -20,25 +21,34 @@ export default function TopBar() {
 }
 
 function Logo() {
-    return (
-      <Link href="/">
-        <a>
-          <Image src="/bs.png" alt="Gaming" />
-        </a>
-      </Link>
-    );
-  }
+  return (
+    <Link href="/">
+      <a>
+        <Image src="https://ydalimir-ecommerce.s3.us-east-2.amazonaws.com/Diseno_sin_titulo_1_b96ff6ff3f.png" alt="the ordynari" />
+      </a>
+    </Link>
+  );
+}
 
-  function Search() {
-    
-    return (
-      <Input
-        id="search-game"
-        icon={{ name: "search" }}
-       
+function Search() {
+  const [searchStr, setSearchStr] = useState("");
+  const [load, setLoad] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (load) {
+      router.push(`/search?query=${searchStr}`);
+    }
+    setLoad(true);
+  }, [searchStr]);
+
+  return (
+    <Input
+      id="search-game"
       
-      />
-    );
-  }
-
-
+      icon={{ name: "search"   }}
+      value={router.query.query}
+      onChange={(_, data) => setSearchStr(data.value)}
+    />
+  );
+}

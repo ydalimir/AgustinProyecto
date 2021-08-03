@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./ChangeEmailForm\";","map":{"version":3,"sources":["/home/ydalimir/Documentos/GitHub/AgustinProyecto/client/components/Account/ChangeEmailForm/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,mBAAxB","sourcesContent":["export { default } from \"./ChangeEmailForm\";\n"]},"metadata":{},"sourceType":"module"}

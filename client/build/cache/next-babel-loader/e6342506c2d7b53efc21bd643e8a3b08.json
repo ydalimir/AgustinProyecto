@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./HeaderGame\";","map":{"version":3,"sources":["/home/ydalimir/Documentos/GitHub/AgustinProyecto/client/components/Game/HeaderGame/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,cAAxB","sourcesContent":["export { default } from \"./HeaderGame\";\n"]},"metadata":{},"sourceType":"module"}

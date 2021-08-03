@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { createContext } from \"react\";\nconst CartContext = /*#__PURE__*/createContext({\n  productsCart: 0,\n  addProductCart: () => null,\n  getProductsCart: () => null,\n  removeProductCart: () => null,\n  removeAllProductsCart: () => null\n});\nexport default CartContext;","map":null,"metadata":{},"sourceType":"module"}

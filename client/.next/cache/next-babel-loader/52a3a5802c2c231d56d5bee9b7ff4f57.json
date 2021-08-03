@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./SummaryCart\";","map":{"version":3,"sources":["/home/ydalimir/Documentos/GitHub/AgustinProyecto/client/components/Cart/SummaryCart/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,eAAxB","sourcesContent":["export { default } from \"./SummaryCart\";\n"]},"metadata":{},"sourceType":"module"}

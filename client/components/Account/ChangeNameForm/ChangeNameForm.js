@@ -5,7 +5,6 @@ import * as Yup from "yup";
 import { toast } from "react-toastify";
 import { updateNameApi } from "../../../api/user";
 
-
 export default function ChangeNameForm(props) {
   const { user, logout, setReloadUser } = props;
   const [loading, setLoading] = useState(false);

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./InfoGame\";","map":{"version":3,"sources":["/home/ydalimir/Documentos/GitHub/AgustinProyecto/client/components/Game/InfoGame/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,YAAxB","sourcesContent":["export { default } from \"./InfoGame\";\n"]},"metadata":{},"sourceType":"module"}

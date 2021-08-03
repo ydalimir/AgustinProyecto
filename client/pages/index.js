@@ -1,92 +1,32 @@
+import React, { useState, useEffect } from "react";
+import { Loader } from "semantic-ui-react";
+import { size } from "lodash";
 import BasicLayout from "../layouts/BasicLayout";
-
+import { getLastGamesApi } from "../api/game";
+import ListGames from "../components/ListGames";
+import Seo from "../components/Seo";
 
 export default function Home() {
-  return (
-    <div className="home">
-       <BasicLayout>
-       <h1>Estamos en la Home</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos</h1>
-       <h1>Productos final</h1>
-      </BasicLayout>
-     
-  
+  const [games, setGames] = useState(null);
 
-    </div>
-  )
+  useEffect(() => {
+    (async () => {
+      const response = await getLastGamesApi(50);
+      if (size(response) > 0) setGames(response);
+      else setGames([]);
+    })();
+  }, []);
+
+  return (
+    <BasicLayout className="home">
+      <Seo />
+      {!games && <Loader active>Cargando productos</Loader>}
+      {games && size(games) === 0 && (
+        <div>
+          <h3>No hay productos</h3>
+        </div>
+      )}
+      {size(games) > 0 && <ListGames games={games} />}
+    </BasicLayout>
+  );
 }

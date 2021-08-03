@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./ListAddress\";","map":{"version":3,"sources":["/home/ydalimir/Documentos/GitHub/AgustinProyecto/client/components/Account/ListAddress/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,eAAxB","sourcesContent":["export { default } from \"./ListAddress\";"]},"metadata":{},"sourceType":"module"}

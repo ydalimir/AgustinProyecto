@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./FormPayment\";","map":{"version":3,"sources":["/home/ydalimir/Documentos/GitHub/AgustinProyecto/client/components/Cart/Payment/FormPayment/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,eAAxB","sourcesContent":["export { default } from \"./FormPayment\";\n"]},"metadata":{},"sourceType":"module"}

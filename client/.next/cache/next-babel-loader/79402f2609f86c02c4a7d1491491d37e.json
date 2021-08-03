@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./ChangeNameForm\";","map":{"version":3,"sources":["/home/ydalimir/Documentos/GitHub/AgustinProyecto/client/components/Account/ChangeNameForm/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,kBAAxB","sourcesContent":["export { default } from \"./ChangeNameForm\";\n"]},"metadata":{},"sourceType":"module"}

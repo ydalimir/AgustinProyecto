@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var BASE_PATH = \"https://ecommerce-mx.herokuapp.com\";\nexport var TOKEN = \"token\";\nexport var CART = \"cart\";\nexport var STRIPE_TOKEN = \"pk_test_51JIcJxAopdEHwRqeHE4dfPfc0BMXeTnqKYC6hba4EcT1DkKftlqFopOAGEe1JezoewdoZQV8v3RfOshlFxApbai900NVsXuC20\";","map":null,"metadata":{},"sourceType":"module"}
